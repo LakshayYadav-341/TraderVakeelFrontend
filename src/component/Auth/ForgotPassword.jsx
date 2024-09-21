@@ -24,7 +24,7 @@ export default function ForgotPassword() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!email) {
+        if (email) {
             toast.error("Please Enter Email.");
             return;
         }
@@ -46,6 +46,11 @@ export default function ForgotPassword() {
         }
     };
 
+    const handleInputChange = (e) => {
+        const { value } = e.target;
+        setEmail(value);
+    };
+
     return (
         <>
             <Container fluid className="vh-100">
@@ -53,6 +58,7 @@ export default function ForgotPassword() {
                     <Col xs={12} lg={5} className="login-left-container">
                         <div className="logo-container">
                             <Image src={logo} fluid className="logo" />
+                            <Image src={logo} fluid className="logo mx-3" />
                         </div>
                         <div>
                             <p className="mt-5">
@@ -104,7 +110,7 @@ export default function ForgotPassword() {
                                                 name="email"
                                                 placeholder="Email"
                                                 value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
+                                                onChange={handleInputChange}
                                             />
                                         </Form.Group>
 
