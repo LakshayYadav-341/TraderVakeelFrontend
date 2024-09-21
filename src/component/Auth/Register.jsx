@@ -78,7 +78,6 @@ export default function Register() {
           <Col xs={12} lg={5} className="login-left-container">
             <div className="logo-container">
               <Image src={logo} fluid className="logo" />
-              <Image src={logo} fluid className="logo mx-3" />
             </div>
             <div>
               <p className="mt-5">

@@ -1,4 +1,6 @@
-import { useState } from "react"; // Import useState
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+
 import { Col, Button, Row, Form, Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -17,31 +19,34 @@ import upstox from "./../../assets/upstox.svg";
 
 import { Image } from "react-bootstrap";
 
-export default function ForgotPassword() {
-    const [email, setEmail] = useState('');
+export default function ResetPassword() {
+    const { token } = useParams();
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
     const navigation = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!email) {
-            toast.error("Please Enter Email.");
+        if (!password) {
+            toast.error("Please Enter Password.");
             return;
         }
         try {
-            const res = await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
+            const res = await axios.post(`http://localhost:5000/api/auth/password-reset/${token}`, { password });
             if (res && res.data) {
-                setEmail("");
+                setPassword("");
+                setConfirmPassword("");
+                toast.success("Password Updated successful!");
                 navigation("/login");
-                toast.success("Registration successful!");
             }
         } catch (error) {
-            if (error.response) {
-                toast.error(`Error: ${error.response.data.message || "An error occurred."}`);
+            if (error?.response) {
+                toast.error(`Error: ${error?.response?.data?.message || "An error occurred."}`);
             } else if (error.request) {
                 toast.error("No response from the server. Please try again later.");
             } else {
-                toast.error(`Error: ${error.message}`);
+                toast.error(`Error: ${error?.message}`);
             }
         }
     };
@@ -93,18 +98,26 @@ export default function ForgotPassword() {
                     <Col xs={12} lg={7} className="bg-image">
                         <div className="login-inner-container">
                             <div className="login-right-container">
-                                <h1 className="fw-bold mb-4">Forgot Password</h1>
+                                <h1 className="fw-bold mb-4">Reset Password</h1>
 
                                 <div className="mb-3">
                                     <Form onSubmit={handleSubmit}>
 
-                                        <Form.Group className="mb-3" controlId="email">
+                                        <Form.Group className="mb-3" controlId="password">
                                             <Form.Control
-                                                type="email"
-                                                name="email"
-                                                placeholder="Email"
-                                                value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
+                                                type="password"
+                                                placeholder="New Password"
+                                                value={password}
+                                                onChange={(e) => setPassword(e.target.value)}
+                                            />
+                                        </Form.Group>
+
+                                        <Form.Group className="mb-3" controlId="password">
+                                            <Form.Control
+                                                type="password"
+                                                placeholder="Confirm Password"
+                                                value={confirmPassword}
+                                                onChange={(e) => setConfirmPassword(e.target.value)}
                                             />
                                         </Form.Group>
 

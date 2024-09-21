@@ -13,6 +13,8 @@ import TermsConditions from "./component/common/TermsConditions";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import ForgotPassword from "./component/Auth/ForgotPassword";
+import ResetPassword from "./component/Auth/ResetPassword";
+import Profile from "./component/Profile/Profile";
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/register" element={<Register />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
             {/* <Route path='/chart' element={<Chart />} /> */}
             <Route path="/table" element={<TableContainer />} />
             <Route path="/pricing" element={<PricePage />} />
@@ -31,6 +34,7 @@ function App() {
             <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/login" element={<Login />} />
             <Route path="/forgot-password" element={<ForgotPassword/>} />
+            <Route path="/password-reset/:token" element={<ResetPassword/>} />
             <Route path="*" element={<Login />} />
           </Routes>
         </BrowserRouter>
