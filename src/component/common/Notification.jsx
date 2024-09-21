@@ -94,7 +94,7 @@ function Notification() {
   return (
     <>
       <div className="icon" onClick={toggleNotifi} ref={notifiIconRef}>
-        <img src={notificationIcon} alt="bell" />
+        <img className="p-1" src={notificationIcon} alt="bell" />
         { count === 0 ? (<></>) : (<div className="info-count">{count}</div>)}
       </div>
       {isNotificationOpen && (

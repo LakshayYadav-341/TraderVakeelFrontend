@@ -41,7 +41,7 @@ function Header({ onHamburgerClick }) {
           <div className="rightPart">
             <FormGroup>
               <FormControlLabel
-                control={<MaterialUISwitch sx={{ m: 1 }} checked={isDarkTheme} />}
+                control={<MaterialUISwitch sx={{ m: 1, fontSize: 10 }} checked={isDarkTheme} />}
                 onClick={toggleDarkTheme}
               />
             </FormGroup>
