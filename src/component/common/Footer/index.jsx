@@ -1,12 +1,12 @@
-import zerodha from "./../../assets/Zerodha.svg";
-import Angel_Breaking from "./../../assets/Angel-Breaking.svg";
-import upstox from "./../../assets/upstox.svg";
-import whatsapp from "./../../assets/whatsapp-white.svg";
-import telegram from "./../../assets/telegram-white.svg";
-import youtube from "./../../assets/youtube-white.svg";
+import zerodha from "../../../assets/Zerodha.svg"
+import Angel_Breaking from "../../../assets/Angel-Breaking.svg";
+import upstox from "../../../assets/upstox.svg";
+import whatsapp from "../../../assets/whatsapp-white.svg";
+import telegram from "../../../assets/telegram-white.svg";
+import youtube from "../../../assets/youtube-white.svg";
 import { Link } from "react-router-dom";
 
-import "./Footer.scss";
+import "./styles.scss";
 
 function Footer() {
   return (

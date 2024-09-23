@@ -1,6 +1,6 @@
 // FullPageLoader.js
 import React from "react";
-import "./FullPageLoader.scss";
+import "./styles.scss";
 
 const FullPageLoader = (props) => {
 

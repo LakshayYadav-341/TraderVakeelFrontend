@@ -1,16 +1,16 @@
 import React from "react";
 import { Navbar, Button } from "react-bootstrap";
-import Notification from "./Notification";
+import Notification from "../../Notification";
 
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
-import logo from "./../../assets/logo.svg";
-import profile from "./../../assets/profile.svg";
-import hamburger from "./../../assets/hamburger.svg";
-import hamburger_white from "./../../assets/Dark Theme/Hamburger_white.svg";
-import MaterialUISwitch from "./MaterialUISwitch";
-import { useDarkTheme } from "../../utils/DarkThemeContext";
+import logo from "../../../assets/logo.svg";
+import profile from "../../../assets/profile.svg";
+import hamburger from "../../../assets/hamburger.svg";
+import hamburger_white from "../../../assets/Dark Theme/Hamburger_white.svg";
+import MaterialUISwitch from "../MaterialUISwitch";
+import { useDarkTheme } from "../../../utils/DarkThemeContext";
 
 function Header({ onHamburgerClick }) {
   const { isDarkTheme, toggleDarkTheme } = useDarkTheme();

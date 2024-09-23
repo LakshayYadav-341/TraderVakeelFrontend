@@ -2,19 +2,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "./component/Auth/Login";
 import Register from "./component/Auth/Register";
-import Dashboard from "./component/Dashboard/Dashboard";
-import PricePage from "./component/Pricing Page/PricePage";
+import Dashboard from "./component/Dashboard";
+import PricePage from "./component/Pricing Page";
 import TableContainer from "./component/Table/TableContainer";
-import About from "./component/About/About";
+import About from "./component/About";
 import { DarkThemeProvider } from "./utils/DarkThemeContext";
 import { ChartsLayout } from "./component/charts/ChartsLayout";
-import PrivacyPolicy from "./component/common/PrivacyPolicy";
-import TermsConditions from "./component/common/TermsConditions";
+import PrivacyPolicy from "./component/PrivacyPolicy/index";
+import TermsConditions from "./component/TermConditions/index"
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import ForgotPassword from "./component/Auth/ForgotPassword";
 import ResetPassword from "./component/Auth/ResetPassword";
-import Profile from "./component/Profile/Profile";
+import Profile from "./component/Profile";
 
 function App() {
   return (

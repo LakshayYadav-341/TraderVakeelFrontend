@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import Layout from "./Layout";
+import Layout from "../common/Layout";
 
 const TermsConditions = () => {
   return (

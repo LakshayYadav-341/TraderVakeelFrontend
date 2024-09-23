@@ -1,14 +1,14 @@
 import { Nav } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { useDarkTheme } from "../../utils/DarkThemeContext";
+import { useDarkTheme } from "../../../utils/DarkThemeContext";
 import { useLocation, NavLink } from "react-router-dom";
-import "./LeftMenu.scss";
+import "./styles.scss";
 
-import { ReactComponent as HomeSvg } from "./../../assets/home.svg";
-import { ReactComponent as PricingSvg } from "./../../assets/pricing.svg";
-import { ReactComponent as AboutSvg } from "./../../assets/about.svg";
-import { ReactComponent as ContactSvg } from "./../../assets/contact.svg";
-import { ReactComponent as LogoutSvg } from "./../../assets/logout.svg";
+import { ReactComponent as HomeSvg } from "../../../assets/home.svg";
+import { ReactComponent as PricingSvg } from "../../../assets/pricing.svg";
+import { ReactComponent as AboutSvg } from "../../../assets/about.svg";
+import { ReactComponent as ContactSvg } from "../../../assets/contact.svg";
+import { ReactComponent as LogoutSvg } from "../../../assets/logout.svg";
 
 function LeftMenu({ show, handleClose }) {
   const { isDarkTheme } = useDarkTheme();

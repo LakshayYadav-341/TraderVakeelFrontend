@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import "./SkeletonLoader.scss";
+import "./styles.scss";
 
 const SkeletonLoader = ({ numColumns }) => {
   const getColumnSize = (numColumns) => {

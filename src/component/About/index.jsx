@@ -3,7 +3,7 @@ import Layout from "../common/Layout";
 import { Image, Button, Row, Col } from "react-bootstrap";
 
 import AboutUs from "./../../assets/aboutUs.png";
-import "./About.scss";
+import "./styles.scss";
 import { useDarkTheme } from "../../utils/DarkThemeContext";
 
 const About = () => {
