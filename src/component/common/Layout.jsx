@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
       ) : (
         <></>
       )}
-      <Container className="p-0 m-0">{children}</Container>
+      <Container fluid className="p-0 m-0">{children}</Container>
       <Footer />
     </div>
   );
